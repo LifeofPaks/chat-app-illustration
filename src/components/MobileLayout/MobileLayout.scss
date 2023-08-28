@@ -12,11 +12,14 @@
   left: 45%;
 
   @include Mobile{
-    top: 5rem;
+    top: 3rem;
     left: 0;
     transform: translateY(0);
     left: 50%;
     transform: translateX(-50%);
+    padding: .4rem;
+    border-radius: 1.5rem;
+    width: 230px;
 }
 
   .wrapper {
@@ -24,6 +27,10 @@
     border-radius: 1.5rem;
     position: relative;
     overflow: hidden;
+
+    @include Mobile{
+        border-radius: 1rem;
+    }
 
     .topCutOut {
       width: 150px;
@@ -35,6 +42,11 @@
       left: 50%;
       transform: translateX(-50%);
       z-index: 20;
+
+      @include Mobile{
+        width: 100px;
+        height: 25px;
+    }
     }
 
     .topSection {
@@ -48,14 +60,32 @@
       margin-bottom: 0.7rem;
       border-top: 1px solid #fff;
 
+      @include Mobile{
+        padding-inline: 0.5rem;
+      padding-bottom: 0.5rem;
+      padding-top: 1rem;
+      margin-bottom: 0.5rem;
+      border-top: .5px solid #fff;
+    }
+
       .profileInfo {
         display: flex;
         align-items: center;
         gap: 0.5rem;
 
+        @include Mobile{
+            gap: 0.3rem;
+        }
+    
+
         .arrow {
           width: 14px;
           cursor: pointer;
+
+          @include Mobile{
+            width: 12px;
+        }
+    
         }
 
         .avatar {
@@ -63,6 +93,12 @@
           border-radius: 50%;
           border: 1px solid $White;
           cursor: pointer;
+
+          @include Mobile{
+            width: 20px;
+            border: 1px solid $White;
+        }
+    
         }
 
         .info {
@@ -70,11 +106,19 @@
             font-size: 13px;
             color: $White;
             font-weight: 500;
+
+            @include Mobile{
+                font-size: 12px;
+            }
           }
 
           p {
             font-size: 10px;
             color: $Grayish-Blue;
+
+            @include Mobile{
+                font-size: 8px;
+            }
           }
         }
       }
@@ -82,6 +126,10 @@
       .ellipsis {
         width: 14px;
         cursor: pointer;
+
+        @include Mobile{
+            width: 12px;
+        }
       }
     }
 
@@ -89,6 +137,12 @@
       p {
         font-size: 9px;
         line-height: 13px;
+
+        @include Mobile{
+            font-size: 7px;
+            line-height: 10px;
+
+        }
       }
 
       .leftBubble {
@@ -99,6 +153,12 @@
         margin-left: 0.5rem;
         padding: 0.6rem;
         border-radius: 0.5rem 0.5rem 0.5rem 0;
+
+        @include Mobile{
+            width: 110px;
+            margin-bottom: 0.3rem;
+            padding: 0.5rem;
+        }
       }
 
       .rightWrapper {
@@ -114,9 +174,14 @@
           gap: 0.5rem;
           margin-bottom: 0.5rem;
 
+
           img {
             width: 40px;
             border-radius: 0.3rem;
+
+            @include Mobile{
+                width: 35px;
+            }
           }
         }
 
@@ -129,6 +194,10 @@
           margin-bottom: 0.5rem;
           text-align: left;
           transform: translateX(70%);
+
+          @include Mobile{
+            width: 125px;
+          }
         }
       }
 
@@ -140,16 +209,29 @@
         background: linear-gradient(to right, $Light-Magenta, $Light-Violet);
         color: $White;
 
+        @include Mobile{
+            width: 150px;
+        }
+
         .wrap{
             display: flex;
             align-items: center;
             gap: .6rem;
+
+            @include Mobile{
+                gap: 0.4rem;
+            }
 
             .radio{
                 width: 12px;
                 height: 12px;
                 border-radius: 50%;
                 border: 1px solid $Light-Grayish-Violet-appBG;
+
+                @include Mobile{
+                    width: 10px;
+                    height: 10px;
+                }
             }
 
            
@@ -157,6 +239,11 @@
         span{
             font-weight: 600;
             font-size: 12px;
+
+            @include Mobile{
+                font-size: 10px;
+            }
+            
         }
       }
     }
@@ -171,12 +258,20 @@
         margin-inline: auto;
         border-radius: 30px;
 
+        
+
 
         input{
             width: 100%;
             padding-left: 1rem;
             padding-block: .8rem;
             font-size: 10px;
+
+            @include Mobile{
+                font-size: 8px;
+                padding-left: .8rem;
+                padding-block: .6rem;
+            }
 
             &::placeholder{
                 color: $Grayish-Blue;
@@ -191,8 +286,19 @@
             border-radius: 50%;
             display: grid;
             place-content: center;
+
+            @include Mobile{
+                width: 32px;
+            height: 26px;
+            }
+
+            
             img{
                 width: 14px;
+
+                @include Mobile{
+                    width: 10px;
+                }
             }
         }
 
