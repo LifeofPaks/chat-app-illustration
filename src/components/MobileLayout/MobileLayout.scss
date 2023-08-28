@@ -1,0 +1,201 @@
+@import "../../styles/Responsive.scss";
+@import "../../styles/Variables.scss";
+
+.mobile {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: $White;
+  padding: 0.6rem;
+  border-radius: 2rem;
+  width: 280px;
+  left: 45%;
+
+  @include Mobile{
+    top: 5rem;
+    left: 0;
+    transform: translateY(0);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+  .wrapper {
+    background: $Light-Grayish-Violet-appBG;
+    border-radius: 1.5rem;
+    position: relative;
+    overflow: hidden;
+
+    .topCutOut {
+      width: 150px;
+      background: $White;
+      position: absolute;
+      top: -15px;
+      border-radius: 30px;
+      height: 35px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 20;
+    }
+
+    .topSection {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(to right, $Light-Violet, $Light-Magenta);
+      padding-inline: 0.7rem;
+      padding-bottom: 0.7rem;
+      padding-top: 2rem;
+      margin-bottom: 0.7rem;
+      border-top: 1px solid #fff;
+
+      .profileInfo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        .arrow {
+          width: 14px;
+          cursor: pointer;
+        }
+
+        .avatar {
+          width: 30px;
+          border-radius: 50%;
+          border: 1px solid $White;
+          cursor: pointer;
+        }
+
+        .info {
+          h1 {
+            font-size: 13px;
+            color: $White;
+            font-weight: 500;
+          }
+
+          p {
+            font-size: 10px;
+            color: $Grayish-Blue;
+          }
+        }
+      }
+
+      .ellipsis {
+        width: 14px;
+        cursor: pointer;
+      }
+    }
+
+    .chat {
+      p {
+        font-size: 9px;
+        line-height: 13px;
+      }
+
+      .leftBubble {
+        width: 150px;
+        margin-bottom: 0.5rem;
+        background: $Pale-Violet;
+        color: $Moderate-Violet;
+        margin-left: 0.5rem;
+        padding: 0.6rem;
+        border-radius: 0.5rem 0.5rem 0.5rem 0;
+      }
+
+      .rightWrapper {
+        text-align: right;
+        margin-right: 0.5rem;
+        margin-block: 1rem;
+
+
+        .rightImages {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          gap: 0.5rem;
+          margin-bottom: 0.5rem;
+
+          img {
+            width: 40px;
+            border-radius: 0.3rem;
+          }
+        }
+
+        .rightBubble {
+          padding: 0.3rem;
+          border-radius: 0.5rem 0.5rem 0 0.5rem ;
+          background: $White;
+          color: $Dark-Grayish-Violet;
+          width: 150px;
+          margin-bottom: 0.5rem;
+          text-align: left;
+          transform: translateX(70%);
+        }
+      }
+
+      .xtra{
+        width: 170px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: linear-gradient(to right, $Light-Magenta, $Light-Violet);
+        color: $White;
+
+        .wrap{
+            display: flex;
+            align-items: center;
+            gap: .6rem;
+
+            .radio{
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                border: 1px solid $Light-Grayish-Violet-appBG;
+            }
+
+           
+        }
+        span{
+            font-weight: 600;
+            font-size: 12px;
+        }
+      }
+    }
+
+    .inputWrapper{
+        width: 94%;
+        background: $White;
+        margin-bottom: .8rem;
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        margin-inline: auto;
+        border-radius: 30px;
+
+
+        input{
+            width: 100%;
+            padding-left: 1rem;
+            padding-block: .8rem;
+            font-size: 10px;
+
+            &::placeholder{
+                color: $Grayish-Blue;
+            }
+        }
+
+        button{
+            margin-right: 0.3rem;
+            background: #000;
+            width: 38px;
+            height: 30px;
+            border-radius: 50%;
+            display: grid;
+            place-content: center;
+            img{
+                width: 14px;
+            }
+        }
+
+    }
+  }
+}
